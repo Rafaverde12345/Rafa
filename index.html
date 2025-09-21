@@ -1,10 +1,58 @@
-# Rafa
-codigos de rafa
-
 <!DOCTYPE html>
 <html>
-  <body>
-    <div id="contador">0</div>
-    <button onclick="document.getElementById('contador').innerText++">Aumentar</button>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Rafa</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: lightblue;
+      border: 5px solid red;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      font-size: 30px;
+      border-radius: 20px;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 100px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contador</h1>
+  <p id="contador">0</p>
+
+  <button onclick="aumentar()">Más</button>
+  <button onclick="disminuir()">Menos</button>
+
+  <script>
+    let valor = 0;
+
+    function aumentar() {
+      valor += 1; // primero cambiamos
+      document.querySelector("#contador").innerText = valor; // luego mostramos
+    }
+
+    function disminuir() {
+      valor -= 1;
+      document.querySelector("#contador").innerText = valor;
+    }
+  </script>
+</body>
 </html>
